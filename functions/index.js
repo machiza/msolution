@@ -7,6 +7,22 @@ app.engine('.hbs', exphbs({defaultLayout: 'layout', extname: '.hbs'}));
 app.set('views', './views');
 app.set('view engine', 'hbs');
 
+
+// ------------------ routes ---------------------
+
+// login
+app.get('/', (req, res) => {
+    res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    res.render('index.hbs', { layout: false });
+});
+
+// ------------------ welcome --------------------
+// index
+app.get('/admin', (req, res) => {
+    res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    res.send('welcome');
+});
+
 // Create and Deploy Your First Cloud Functions
 // https://firebase.google.com/docs/functions/write-firebase-functions
 

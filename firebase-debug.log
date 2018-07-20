@@ -1,0 +1,83 @@
+[debug] [2018-07-20T10:22:24.206Z] ----------------------------------------------------------------------
+[debug] [2018-07-20T10:22:24.210Z] Command:       /usr/bin/node /usr/bin/firebase serve --only functions,hosting
+[debug] [2018-07-20T10:22:24.210Z] CLI Version:   3.19.3
+[debug] [2018-07-20T10:22:24.210Z] Platform:      linux
+[debug] [2018-07-20T10:22:24.210Z] Node Version:  v8.11.3
+[debug] [2018-07-20T10:22:24.210Z] Time:          Fri Jul 20 2018 12:22:24 GMT+0200 (CAT)
+[debug] [2018-07-20T10:22:24.211Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-07-20T10:22:24.226Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-20T10:22:24.226Z] > authorizing via signed-in user
+[debug] [2018-07-20T10:22:24.230Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/msolution-90e6e  
+  
+ Fri Jul 20 2018 12:22:24 GMT+0200 (CAT)
+[debug] [2018-07-20T10:22:26.102Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-20T10:22:26.105Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/msolution-90e6e/tokens  
+  
+ Fri Jul 20 2018 12:22:26 GMT+0200 (CAT)
+[debug] [2018-07-20T10:22:33.825Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-20T10:22:33.829Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/msolution-90e6e  
+  
+ Fri Jul 20 2018 12:22:33 GMT+0200 (CAT)
+[debug] [2018-07-20T10:22:40.989Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/machiza/Documents/NodeProjects/msolution'...
+[info] 
+[info] i  functions: Preparing to emulate functions.
+[debug] [2018-07-20T10:22:42.136Z] Fetching environment
+[debug] [2018-07-20T10:22:42.144Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/746401686761:getServerAppConfig  
+  
+ Fri Jul 20 2018 12:22:42 GMT+0200 (CAT)
+[debug] [2018-07-20T10:22:42.145Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/746401686761/clients/_:getWebAppConfig  
+  
+ Fri Jul 20 2018 12:22:42 GMT+0200 (CAT)
+[debug] [2018-07-20T10:22:44.368Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
+[debug] [2018-07-20T10:22:49.221Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-20T10:22:49.221Z] Starting @google-cloud/functions-emulator
+[debug] [2018-07-20T10:22:51.908Z] Parsing function triggers
+[info] ✔  functions: app: http://localhost:5001/msolution-90e6e/us-central1/app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /index.html? to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /? to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /admin? to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /? to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting /? to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /? to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /? to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /? to local function app
+[info] [hosting] Rewriting /? to local function app
+[info] [hosting] Rewriting /? to local function app
+[info] [hosting] Rewriting /? to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /admin to local function app
+[info] [hosting] Rewriting /admin to local function app
