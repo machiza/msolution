@@ -1,158 +1,152 @@
-[debug] [2018-07-20T10:22:24.206Z] ----------------------------------------------------------------------
-[debug] [2018-07-20T10:22:24.210Z] Command:       /usr/bin/node /usr/bin/firebase serve --only functions,hosting
-[debug] [2018-07-20T10:22:24.210Z] CLI Version:   3.19.3
-[debug] [2018-07-20T10:22:24.210Z] Platform:      linux
-[debug] [2018-07-20T10:22:24.210Z] Node Version:  v8.11.3
-[debug] [2018-07-20T10:22:24.210Z] Time:          Fri Jul 20 2018 12:22:24 GMT+0200 (CAT)
-[debug] [2018-07-20T10:22:24.211Z] ----------------------------------------------------------------------
+[debug] [2018-07-20T14:56:01.186Z] ----------------------------------------------------------------------
+[debug] [2018-07-20T14:56:01.190Z] Command:       /usr/bin/node /usr/bin/firebase serve --only functions,hosting
+[debug] [2018-07-20T14:56:01.190Z] CLI Version:   3.19.3
+[debug] [2018-07-20T14:56:01.190Z] Platform:      linux
+[debug] [2018-07-20T14:56:01.190Z] Node Version:  v8.11.3
+[debug] [2018-07-20T14:56:01.190Z] Time:          Fri Jul 20 2018 16:56:01 GMT+0200 (CAT)
+[debug] [2018-07-20T14:56:01.190Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2018-07-20T10:22:24.226Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2018-07-20T10:22:24.226Z] > authorizing via signed-in user
-[debug] [2018-07-20T10:22:24.230Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/msolution-90e6e  
+[debug] [2018-07-20T14:56:01.206Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-07-20T14:56:01.206Z] > authorizing via signed-in user
+[debug] [2018-07-20T14:56:01.210Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-07-20T14:56:01.210Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/4Ggc4l59SngzwSLwgIP4sGX3_uypqvEcuQqnfvA2JLj4ZJT8dHUuMAALxW7-IKUA',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Fri Jul 20 2018 16:56:01 GMT+0200 (CAT)
+[debug] [2018-07-20T14:56:02.679Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-20T14:56:02.719Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/msolution-90e6e  
   
- Fri Jul 20 2018 12:22:24 GMT+0200 (CAT)
-[debug] [2018-07-20T10:22:26.102Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-20T10:22:26.105Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/msolution-90e6e/tokens  
+ Fri Jul 20 2018 16:56:02 GMT+0200 (CAT)
+[debug] [2018-07-20T14:56:05.042Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-20T14:56:05.044Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/msolution-90e6e/tokens  
   
- Fri Jul 20 2018 12:22:26 GMT+0200 (CAT)
-[debug] [2018-07-20T10:22:33.825Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-20T10:22:33.829Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/msolution-90e6e  
+ Fri Jul 20 2018 16:56:05 GMT+0200 (CAT)
+[debug] [2018-07-20T14:56:06.331Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-20T14:56:06.337Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/msolution-90e6e  
   
- Fri Jul 20 2018 12:22:33 GMT+0200 (CAT)
-[debug] [2018-07-20T10:22:40.989Z] <<< HTTP RESPONSE 200
+ Fri Jul 20 2018 16:56:06 GMT+0200 (CAT)
+[debug] [2018-07-20T14:56:07.948Z] <<< HTTP RESPONSE 200
 [info] 
 [info] === Serving from '/home/machiza/Documents/NodeProjects/msolution'...
 [info] 
 [info] i  functions: Preparing to emulate functions.
-[debug] [2018-07-20T10:22:42.136Z] Fetching environment
-[debug] [2018-07-20T10:22:42.144Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/746401686761:getServerAppConfig  
+[debug] [2018-07-20T14:56:08.976Z] Fetching environment
+[debug] [2018-07-20T14:56:08.982Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/746401686761:getServerAppConfig  
   
- Fri Jul 20 2018 12:22:42 GMT+0200 (CAT)
-[debug] [2018-07-20T10:22:42.145Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/746401686761/clients/_:getWebAppConfig  
+ Fri Jul 20 2018 16:56:08 GMT+0200 (CAT)
+[debug] [2018-07-20T14:56:08.983Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/746401686761/clients/_:getWebAppConfig  
   
- Fri Jul 20 2018 12:22:42 GMT+0200 (CAT)
-[debug] [2018-07-20T10:22:44.368Z] <<< HTTP RESPONSE 200
+ Fri Jul 20 2018 16:56:08 GMT+0200 (CAT)
+[debug] [2018-07-20T14:56:10.477Z] <<< HTTP RESPONSE 200
+[debug] [2018-07-20T14:56:10.479Z] Starting @google-cloud/functions-emulator
+[debug] [2018-07-20T14:56:10.550Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
 
-[debug] [2018-07-20T10:22:49.221Z] <<< HTTP RESPONSE 200
-[debug] [2018-07-20T10:22:49.221Z] Starting @google-cloud/functions-emulator
-[debug] [2018-07-20T10:22:51.908Z] Parsing function triggers
+[debug] [2018-07-20T14:56:13.172Z] Parsing function triggers
 [info] ✔  functions: app: http://localhost:5001/msolution-90e6e/us-central1/app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting /index.html? to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting /? to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting /admin? to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting /? to local function app
-[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /previlegios/adicionar to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios/adicionar? to local function app
+[info] [hosting] Rewriting /previlegios/adicionar? to local function app
+[info] [hosting] Rewriting /previlegios/adicionar to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios/adicionar? to local function app
+[info] [hosting] Rewriting /previlegios/adicionar to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios/adicionar? to local function app
+[info] [hosting] Rewriting /previlegios/adicionar to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios/adicionar? to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
 [info] [hosting] Rewriting /css/bootstrap.css.map to local function app
-[info] [hosting] Rewriting / to local function app
 [info] [hosting] Rewriting /css/bootstrap.css.map to local function app
-[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
 [info] [hosting] Rewriting /css/bootstrap.css.map to local function app
-[info] [hosting] Rewriting /? to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting /? to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting /? to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting /? to local function app
-[info] [hosting] Rewriting /? to local function app
-[info] [hosting] Rewriting /? to local function app
-[info] [hosting] Rewriting /? to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting /admin to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
 [info] [hosting] Rewriting /css/bootstrap.css.map to local function app
-[info] [hosting] Rewriting /admin to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
 [info] [hosting] Rewriting /css/bootstrap.css.map to local function app
-[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
 [info] [hosting] Rewriting /css/bootstrap.css.map to local function app
-[info] [hosting] Rewriting /admin to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
 [info] [hosting] Rewriting /css/bootstrap.css.map to local function app
-[info] [hosting] Rewriting /admin to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
 [info] [hosting] Rewriting /css/bootstrap.css.map to local function app
-[info] [hosting] Rewriting / to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
 [info] [hosting] Rewriting /css/bootstrap.css.map to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting /admin to local function app
-[info] [hosting] Rewriting / to local function app
-[info] [hosting] Rewriting /admin to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios/Administrator? to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios/adicionar to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios/adicionar? to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
+[info] [hosting] Rewriting /previlegios/actualizar to local function app
+[info] [hosting] Rewriting /previlegios/Administrator? to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios/adicionar to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios/adicionar? to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios/Administrator to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios/q1aGawAKUj0qP3D9AjAo to local function app
+[info] [hosting] Rewriting /previlegios/q1aGawAKUj0qP3D9AjAo to local function app
+[info] [hosting] Rewriting /previlegios/q1aGawAKUj0qP3D9AjAo? to local function app
+[info] [hosting] Rewriting /previlegios/q1aGawAKUj0qP3D9AjAo to local function app
+[info] [hosting] Rewriting /previlegios/q1aGawAKUj0qP3D9AjAo to local function app
+[info] [hosting] Rewriting /previlegios/q1aGawAKUj0qP3D9AjAo? to local function app
+[info] [hosting] Rewriting /previlegios/q1aGawAKUj0qP3D9AjAo? to local function app
+[info] [hosting] Rewriting /previlegios/q1aGawAKUj0qP3D9AjAo to local function app
+[info] [hosting] Rewriting /previlegios/q1aGawAKUj0qP3D9AjAo to local function app
+[info] [hosting] Rewriting /previlegios/q1aGawAKUj0qP3D9AjAo? to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios/adicionar to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios/adicionar? to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting /previlegios? to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting /previlegios? to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting /previlegios? to local function app
+[info] [hosting] Rewriting /css/bootstrap.css.map to local function app
+[info] [hosting] Rewriting /previlegios? to local function app
+[info] [hosting] Rewriting /previlegios/delete/0FkJxOkjNrebDdu6qlht to local function app
+[info] [hosting] Rewriting /previlegios to local function app
+[info] [hosting] Rewriting /previlegios to local function app
