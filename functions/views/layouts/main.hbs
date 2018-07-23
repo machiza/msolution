@@ -16,6 +16,29 @@
 <link rel="stylesheet" href="../js/datepicker/datepicker.css" type="text/css" />
   <link rel="stylesheet" href="../css/app.css" type="text/css" />
   <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyAOVX_8q5S-2nV_E5aN1_pp1MMUQjOibHQ",
+        authDomain: "msolution-90e6e.firebaseapp.com",
+        databaseURL: "https://msolution-90e6e.firebaseio.com",
+        projectId: "msolution-90e6e",
+        storageBucket: "msolution-90e6e.appspot.com",
+        messagingSenderId: "746401686761"
+    };
+    firebase.initializeApp(config);
+
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+        if(firebaseUser) {
+          $('#cUserName').text(firebaseUser.displayName);
+          $('#photoProfile').attr('src',firebaseUser.photoURL);
+          console.log(firebaseUser.photoURL);
+        } else {
+          window.location.href = "/";
+        }
+      });
+  </script>
+
   <!--[if lt IE 9]>
     <script src="js/ie/html5shiv.js"></script>
     <script src="js/ie/respond.min.js"></script>

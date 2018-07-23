@@ -106,6 +106,75 @@ app.get('/previlegios/delete/:id', (req, res) => {
     res.redirect('/previlegios');
 });
 
+// ---------------------- utilizador ------------------------
+// index
+app.get('/utilizador', (req, res) => {
+    res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    var users = [];
+    admin.auth().listUsers().then(function(listUsersResult) {
+        listUsersResult.users.forEach(function(userRecord) {
+            db.collection('users').doc(userRecord.uid).get().then(doc => {
+                users.push({
+                    id: userRecord.id,
+                    email: userRecord.email,
+                    password: userRecord.password,
+                    displayName: userRecord.displayName,
+                    photoURL: userRecord.photoURL,
+                    previlegio: {
+                        idPre: doc.id,
+                        nome: doc.data().nomePrevilegio,
+                        timestamp: doc.data().timestamp
+                    }
+                });
+                res.render('utilizador/index', { users });
+            });
+            
+        });
+    });
+});
+
+// add
+app.get('/utilizador/adicionar', (req, res) => {
+    res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    var previlegios = [];
+    db.collection('previlegios').get().then(snapshot => {
+        snapshot.forEach(doc => {
+            previlegios.push({
+                id: doc.id,
+                nome: doc.data().nome
+            });
+            res.render('utilizador/create', { previlegios });
+        });
+    });
+});
+
+// store
+app.post('/utilizador', (req, res) => {
+    
+    admin.auth().createUser({
+        email: req.body.email,
+        emailVerified: false,
+        password: req.body.password,
+        displayName: req.body.utilizador,
+        photoURL: req.body.photo,
+        disabled: false
+    })
+    .then(function(userRecord) {
+        const data = {
+            idPrevilegio: req.body.idPrev,
+            nomePrevilegio: req.body.nomePrev,
+            timestamp: admin.firestore.FieldValue.serverTimestamp()
+        }
+        db.collection('users').doc(userRecord.uid).set(data);
+    })
+    .catch(function(error) {
+        res.send(error);
+        console.log("Error creating new user:", error);
+    });
+
+    res.end('successfully');
+});
+
 // Create and Deploy Your First Cloud Functions
 // https://firebase.google.com/docs/functions/write-firebase-functions
 
