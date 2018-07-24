@@ -1,0 +1,40 @@
+<section class="vbox">
+  <section class="scrollable padder">
+    <ul class="breadcrumb no-border no-radius b-b b-light pull-in">
+      <li><a href="/admin"><i class="fa fa-home"></i> Home</a></li>
+      <li><a href="#">Definições</a></li>
+      <li><a href="/cargo">Cargo</a></li>
+      <li><a class="active">Adicionar</a></li>
+    </ul>
+
+    <form data-validate="parsley" id="frm-save">
+      <section class="panel panel-default">
+        <header class="panel-heading">
+          <span class="h4">Register</span>
+        </header>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+              <p class="text-muted">Please fill the information to continue</p>
+              <div class="form-group">
+                <label>Nome</label>
+                <input type="text" class="form-control" data-required="true" id="nome" placeholder="Nome do cargo">                        
+              </div>
+              <div class="form-group">
+                <label>Observação</label>
+                <input type="text" id="obs" class="form-control" data-required="true" placeholder="Observação">                        
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="panel-footer text-right bg-light lter">
+          <button id="btnSalvar" class="btn btn-success btn-s-xs">Salvar</button>
+        </footer>
+      </section>
+    </form>
+
+  </section>
+</section>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/app/cargo/script.js"></script>

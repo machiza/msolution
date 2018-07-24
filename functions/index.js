@@ -113,23 +113,9 @@ app.get('/utilizador', (req, res) => {
     var users = [];
     admin.auth().listUsers().then(function(listUsersResult) {
         listUsersResult.users.forEach(function(userRecord) {
-            db.collection('users').doc(userRecord.uid).get().then(doc => {
-                users.push({
-                    id: userRecord.id,
-                    email: userRecord.email,
-                    password: userRecord.password,
-                    displayName: userRecord.displayName,
-                    photoURL: userRecord.photoURL,
-                    previlegio: {
-                        idPre: doc.id,
-                        nome: doc.data().nomePrevilegio,
-                        timestamp: doc.data().timestamp
-                    }
-                });
-                res.render('utilizador/index', { users });
-            });
-            
+            users.push(userRecord);
         });
+        res.render('utilizador/index', { users });
     });
 });
 
@@ -174,6 +160,127 @@ app.post('/utilizador', (req, res) => {
 
     res.end('successfully');
 });
+
+// -------------------- Departamento -----------------------
+// index
+app.get('/departamento', (req, res) => {
+    res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    var depts = [];
+    db.collection('departamentos').get().then(snapshot => {
+        snapshot.forEach(doc => {
+            depts.push({
+                id: doc.id,
+                sigla: doc.data().sigla,
+                des: doc.data().des,
+                obs: doc.data().obs,
+                timestamp: doc.data().timestamp
+            });
+        });
+        res.render('departamento/index', { depts });
+    });
+});
+
+// add
+app.get('/departamento/adicionar', (req, res) => {
+    res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    res.render('departamento/create');
+});
+
+// store
+app.post('/departamento', (req, res) => {
+    db.collection('departamentos').add({
+        sigla: req.body.sigla,
+        des: req.body.des,
+        obs: req.body.obs,
+        timestamp: admin.firestore.FieldValue.serverTimestamp()
+    });
+
+    res.end('Successfully');
+});
+
+// edit
+app.get('/departamento/:id', (req, res) => {
+    res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    db.collection('departamentos').doc(req.params.id).get().then(doc => {
+        res.render('departamento/edit', { id: doc.id, dept: doc.data() });
+    });
+});
+
+// update
+app.post('/departamento/:id', (req, res) => {
+    db.collection('departamentos').doc(req.params.id).update({
+        des: req.body.des,
+        sigla: req.body.sigla,
+        obs: req.body.obs,
+        timestamp: admin.firestore.FieldValue.serverTimestamp()
+    });
+    res.end('Successfully');
+});
+
+// delete
+app.get('/departamento/delete/:id', (req, res) => {
+    db.collection('departamentos').doc(req.params.id).delete();
+    res.redirect('/departamento');
+});
+
+// ------------------- cargo ----------------------
+// index
+app.get('/cargo', (req, res) => {
+    res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    var cargos = [];
+    db.collection('cargos').get().then(snapshot => {
+        snapshot.forEach(doc => {
+            cargos.push({
+                id: doc.id,
+                nome: doc.data().nome,
+                obs: doc.data().obs,
+                timestamp: doc.data().timestamp
+            });
+        });
+        res.render('cargo/index', { cargos });
+    });
+});
+
+// add
+app.get('/cargo/adicionar', (req, res) => {
+    res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    res.render('cargo/create');
+});
+
+// store
+app.post('/cargo', (req, res) => {
+    db.collection('cargos').add({
+        nome: req.body.nome,
+        obs: req.body.obs,
+        timestamp: admin.firestore.FieldValue.serverTimestamp()
+    });
+    res.end('Successfully');
+});
+
+// edit
+app.get('/cargo/:id', (req, res) => {
+    res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+    db.collection('cargos').doc(req.params.id).get().then(doc => {
+        res.render('cargo/edit', { id: doc.id, cargo: doc.data() });
+    });
+});
+
+// update
+app.post('/cargo/:id', (req, res) => {
+    db.collection('cargos').doc(req.params.id).update({
+        nome: req.body.nome,
+        obs: req.body.obs,
+        timestamp: admin.firestore.FieldValue.serverTimestamp()
+    });
+    res.end('Successfully');
+});
+
+// delete
+app.get('/cargo/delete/:id', (req, res) => {
+    db.collection('cargos').doc(req.params.id).delete();
+    res.redirect('/cargo');
+});
+
 
 // Create and Deploy Your First Cloud Functions
 // https://firebase.google.com/docs/functions/write-firebase-functions

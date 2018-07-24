@@ -13,7 +13,7 @@
       <header class="panel-heading">
         DataTables 
         <i class="fa fa-info-sign text-muted" data-toggle="tooltip" data-placement="bottom" data-title="ajax to load the data."></i> 
-        <a style="float: right; margin-top: -6px;" href="/departamento/adicionar" class="btn btn-sm btn-default">
+        <a style="float: right; margin-top: -6px;" href="/cargo/adicionar" class="btn btn-sm btn-default">
           <i class="fa fa-plus text"></i>
           <span class="text">Adicionar</span>
           <i class="fa fa-minus text-active"></i>
@@ -24,22 +24,22 @@
         <table class="table table-striped m-b-none" id="DataTables_Table_0">
           <thead>
             <tr>
-              <th width="20%">Sigla</th>
-              <th width="25%">Designação</th>
+              <th width="20%">Nome</th>
               <th width="35%">Observação</th>
-              <th width="20%" style="text-align: center">ações</th>
+              <th width="30%">Data</th>
+              <th width="15%" style="text-align: center">ações</th>
             </tr>
           </thead>
           <tbody>
-              {{#each depts }}
+              {{#each cargos }}
               <tr>
-                <td>{{ sigla }}</td>
-                <td>{{ des }}</td>
+                <td>{{ nome }}</td>
                 <td>{{ obs }}</td>
+                <td>{{ timestamp }}</td>
                 <td style="text-align: center">
-                  <a href="/departamento/{{ id }}" class="btn btn-sm btn-icon btn-info"><i class="fa fa-edit"></i></a>
+                  <a href="/cargo/{{ id }}" class="btn btn-sm btn-icon btn-info"><i class="fa fa-edit"></i></a>
                   <a href="#" class="btn btn-sm btn-icon btn-success"><i class="fa fa-search"></i></a>
-                  <a href="/departamento/delete/{{ id }}" class="btn btn-sm btn-icon btn-danger"><i class="fa fa-trash-o"></i></a>
+                  <a href="/cargo/delete/{{ id }}" class="btn btn-sm btn-icon btn-danger"><i class="fa fa-trash-o"></i></a>
                 </td>
               </tr>
               {{/each}}
@@ -54,7 +54,7 @@
 <script src="../js/jquery.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
-<script src="../js/app/departamento/script.js"></script>
+<script src="../js/app/cargo/script.js"></script>
 <script>
   $('#DataTables_Table_0').DataTable();
 </script>
